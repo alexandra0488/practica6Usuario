@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <figure class="col-12 col-md-3">
+            <img [src]="unUsuario.image" [alt]="unUsuario.image">
+        </figure>
+      </div>
+    
+      <div class="col" style="border-left: 1px solid black; height: 500px;">
+        <div class="col-12 col-md-9  ms-5" >
+            <h2>{{unUsuario.first_name}}</h2>
+            <h2>{{unUsuario.last_name}}</h2>
+        </div>
+            <br>
+        <div class="col-12 col-md-9  ms-5">
+            <p><strong>Nombre Usuario:</strong> {{unUsuario.username}}</p>
+            <p><strong>Email:</strong>{{unUsuario.email}}</p>
+        </div>
+        <div  class="col-12 col-md-9  ms-5 ">
+
+                <a class="btn border-black " (click)="deleteUser()">
+                  <br>Eliminar
+                </a>
+                <a [routerLink]="['/update', unUsuario._id]" class="btn border-black">
+                 <br>Actualizar
+                </a>
+                <a [routerLink]="'/home'" class="btn border-black">
+                    <br>Volver al listado
+                  </a>
+             
+
+        </div>
+           
+            
+       
+      </div>
+    </div>
+    
+  </div>
+
+
+
+
