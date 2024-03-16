@@ -1,0 +1,32 @@
+
+<form (submit)="saveUser()">
+    <div class="mb-3">
+        <h4 *ngIf="isUpdating">ACTUALIZAR USUARIO</h4>
+        <h4 *ngIf="!isUpdating">NUEVO USUARIO</h4>
+        <br>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Nombre Usuario</label>
+        <input ype="text" class="form-control" id="exampleInputName"   [(ngModel)]="formUsuario.first_name" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputApellido" class="form-label">Apellido Usuario</label>
+        <input type="text" class="form-control" id="exampleInputApellido"  [(ngModel)]="formUsuario.last_name" [ngModelOptions]="{standalone: true}"> 
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email Usuario</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="formUsuario.email" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputImagen" class="form-label">Imagen Usuario</label>
+      <input type="text" class="form-control" id="exampleInputImagen" >
+    </div>
+   
+    <button type="submit" class="btn btn-primary" [routerLink]="'/home'">Guardar</button>
+</form>
+<router-outlet></router-outlet>
