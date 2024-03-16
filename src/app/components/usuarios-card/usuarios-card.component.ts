@@ -12,6 +12,6 @@ import { RouterLink } from '@angular/router';
 export class UsuariosCardComponent {
 
   @Input() usuario!: IUsuarios;
-
+ 
  
 }
